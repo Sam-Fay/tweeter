@@ -45,13 +45,16 @@
     <body>
 
       <!-- Top nav bar (fixed) -->
-      
+
       <nav>
+
       <span id="logo">tweeter</span>
       <span id="write-a-new-tweet"
         ><strong>Write</strong> a new tweet
         <div>
-          <i id="write-tweet" class="fas fa-angle-double-down"></i></div></span>
+          <i id="write-tweet" class="fas fa-angle-double-down"></i></div>
+        </span>
+
     </nav>
    
     <header id="me">
@@ -68,17 +71,20 @@
     <main class="container">
       <section class="new-tweet">
         <h2>Compose Tweet</h2>
+        
         <form method="POST" action="/tweets" class="new-tweet-form">
           <textarea
             class="post-text"
             name="text"
             placeholder="What are you humming about?"
           ></textarea>
+
           <div id="under-new-tweet">
             <input type="submit" value="Tweet" />
             <span class="display-error"></span>
             <span class="counter">140</span>
           </div>
+
         </form>
       </section>
 
@@ -89,6 +95,15 @@
       <i id="to-top-icon" class="fas fa-angle-double-up"></i>
     </button>
   </body>
+  <!--App JS that needs to load after body-->
+  
+  <script
+  type="text/javascript"
+  src="/scripts/composer-char-counter.js"
+   ></script>
 
+  <script type="text/javascript" src="/scripts/client.js">
+  
+  </script>
   
   </html>

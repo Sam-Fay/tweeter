@@ -1,40 +1,25 @@
-img {
-  height: 300px;
-  width: 300px;
-  border-radius: 40%;
-}
-
-#image {
+body > header {
+  height: 400px;
+  background-color: #f7aa36;
+  background-image: url("https://www.transparenttextures.com/patterns/nasty-fabric.png");
   display: flex;
-  justify-content: center;
-  margin-top: 3%;
+  flex-direction:column ;
+  justify-content:center;
+  align-items:center;
+  width: 100vw;
+  margin-top: 115px;
 }
 
-@media only screen and (max-width: 1024px) {
-  #me {
-    height: 400px;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin: 100px 0 0 0;
-    background-color: #03002e;
-    background-image: url("https://www.transparenttextures.com/patterns/3px-tile.png");
-  }
+.username {
+  color: white;
+  font-size: 30px;
 }
 
 @media only screen and (min-width: 1024px) {
-  #me {
-    height: 60%;
-    width: 40%;
-    position: fixed;
-    float: left;
-    margin: 115px 0 0 5%;
-    background-color: #03002e;
-    background-image: url("https://www.transparenttextures.com/patterns/3px-tile.png");
-  }
 
-  #image {
-    margin: none;
-  }
+body > header {
+  width: 30vw;
+  margin :200px 60px 60px 60px;
 }
+
+}  
