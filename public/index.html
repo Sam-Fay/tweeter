@@ -5,13 +5,14 @@
     <!-- Meta Information -->
     <title>Tweeter - Home Page</title>
     
-
     <!-- External CSS -->
     <link
     rel="stylesheet" 
     href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
     type="text/css" 
     />
+
+    <!-- Fonts CDN-->
 
     <link
       href="https://fonts.googleapis.com/css?family=Bungee|Source+Sans+Pro:300,300i,700,700i&display=swap"
@@ -29,10 +30,16 @@
 
     <!-- External JS -->
     
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script 
+    
+    src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    
     <script
-      src="https://kit.fontawesome.com/746b2f3e9e.js"
-      crossorigin="anonymous"
+    
+    src="https://kit.fontawesome.com/746b2f3e9e.js"
+    
+    crossorigin="anonymous"
+    
     ></script>
     
   
@@ -68,10 +75,14 @@
     </header>
 
     <!-- Page-specific (main) content here -->
+     <!-- //creates up arrow icon -->
+     <div>
+      <button id="scroll"><i class="material-icons">arrow_upward</i></button>
+    </div>
+
     <main class="container">
       <section class="new-tweet">
         <h2>Compose Tweet</h2>
-        
         <form method="POST" action="/tweets" class="new-tweet-form">
           <textarea
             class="post-text"
