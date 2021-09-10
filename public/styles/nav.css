@@ -1,72 +1,72 @@
 nav {
-    top: 0;
-    height: 120px;
-    width: 100%;
-    background-color: #4056a1;
-    color: #ffffff;
-    padding: 1.5em;
-    position: fixed;
+  top: 0;
+  height: 120px;
+  width: 100%;
+  background-color: #4056a1;
+  color: #ffffff;
+  padding: 1.5em;
+  position: fixed;
+}
+
+nav .logo {
+  font-family: 'Bungee', sans-serif;
+  font-size: 2.25em;
+}
+
+nav .new {
+  font-size: 1.25em;
+}
+
+nav .right-nav {
+  float: right;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+nav .right-nav:hover {
+  font-size: 1.1em;
+  cursor: pointer;
+}
+
+@keyframes MoveUpDown {
+  0%, 100% {
+    transform: translateY(0);
   }
-  
-  nav .logo {
-    font-family: 'Bungee', sans-serif;
-    font-size: 2.25em;
+  50% {
+    transform: translateY(10px);
   }
-  
-  nav .new {
-    font-size: 1.25em;
-  }
-  
-  nav .right-nav {
-    float: right;
+}
+
+nav i {
+  color: red;
+  animation: MoveUpDown 2s linear infinite;
+}  
+
+.bounce {
+  animation: MoveUpDown 1s linear infinite;
+}
+
+/* Mobile Styles */
+
+@media only screen and (max-width: 580px) {
+  nav {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
+    background-color: transparent;
   }
-  
+
+  nav .logo {
+    font-size: 1.5em;
+  }
+
+  nav .new {
+    font-size: 1em;
+  }
+
   nav .right-nav:hover {
-    font-size: 1.1em;
-    cursor: pointer;
+    font-size: 1em;
   }
-  
-  @keyframes MoveUpDown {
-    0%, 100% {
-      transform: translateY(0);
-    }
-    50% {
-      transform: translateY(10px);
-    }
-  }
-  
-  nav i {
-    color: red;
-    animation: MoveUpDown 2s linear infinite;
-  }  
-  
-  .bounce {
-    animation: MoveUpDown 1s linear infinite;
-  }
-  
-  /* Mobile Styles */
-  
-  @media only screen and (max-width: 580px) {
-    nav {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      background-color: transparent;
-    }
-  
-    nav .logo {
-      font-size: 1.5em;
-    }
-  
-    nav .new {
-      font-size: 1em;
-    }
-  
-    nav .right-nav:hover {
-      font-size: 1em;
-    }
-  }
+}
