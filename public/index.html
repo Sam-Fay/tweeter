@@ -11,13 +11,11 @@
     href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
     type="text/css" 
     />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
 
     <!-- Fonts CDN-->
+    <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Source+Sans+Pro:ital,wght@0,300;0,600;1,300;1,600&display=swap" rel="stylesheet">
 
-    <link
-      href="https://fonts.googleapis.com/css?family=Bungee|Source+Sans+Pro:300,300i,700,700i&display=swap"
-      rel="stylesheet"
-    />
 
     <!-- App CSS -->
     <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
@@ -46,75 +44,68 @@
     <!-- App JS -->
     
     <script type="text/javascript" src="/scripts/client.js"></script>
-    <script src="./scripts/composer-char-counter.js"></script>
-    
-    </head>
+    <script src="/scripts/composer-char-counter.js"></script>
+    <script type="text/javascript" src="/scripts/jquery.timeago.js"></script>
+      
+    <!-- Constrain viewport zoom -->
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0' />
+  </head>
+
+  </head>
     <body>
 
       <!-- Top nav bar (fixed) -->
 
-      <nav>
-
-      <span id="logo">tweeter</span>
-      <span id="write-a-new-tweet"
-        ><strong>Write</strong> a new tweet
-        <div>
-          <i id="write-tweet" class="fas fa-angle-double-down"></i></div>
-        </span>
-
-    </nav>
-   
-    <header id="me">
-      <div id="image">
-        <img src="/images/profile-hex.png" />
+      <!-- Top nav bar (fixed) -->
+    <nav>
+      <span class="logo" >tweeter</span>
+      <div class="right-nav">
+        <span class="new" ><b>Write</b> a new tweet</span>
+        <i class="fas fa-angle-double-down"></i>
       </div>
-      <br />
+    </nav>
+    <div class="responsive-container">
+    <!-- Main Header -->
+    <header class="main-header">
       <div>
-        <h2> Sam Fay </h2>
+          <img src="/images/profile-hex.png"> 
+      </div>
+      <div>
+          <h2>Sam Fay</h2>
       </div>
     </header>
+<!-- Page-specific (main) content here -->
+<main class="container">
+  <section class="sliding">
+    <i class="red fas fa-exclamation-triangle"></i>
+    <p class="error"></p>
+    <i class="red fas fa-exclamation-triangle"></i>
+  </section>
+  <section class="new-tweet">
+    <h2>Compose Tweet</h2>
+    <form action="/tweets/" method="POST">
+      <div class="form-top">
+        <label for="tweet-text"><b>What are you humming about?</b></label>
+        <textarea name="text" id="tweet-text"></textarea>
+      </div>
+      <div class="form-bottom">
+        <button id="tweet-button" type="submit">Tweet</button>
+        <output name="counter" class="counter" for="tweet-text">140</output>
+      </div>
+    </form>
+  </section>
+  <br>
+  <section class="tweets">
+  </section>
+  <br>
+  <br>
+  <br>
+</main>
+</div>
 
-    <!-- Page-specific (main) content here -->
-     <!-- //creates up arrow icon -->
-     <div>
-      <button id="scroll"><i class="material-icons">arrow_upward</i></button>
-    </div>
-
-    <main class="container">
-      <section class="new-tweet">
-        <h2>Compose Tweet</h2>
-        <form method="POST" action="/tweets" class="new-tweet-form">
-          <textarea
-            class="post-text"
-            name="text"
-            placeholder="What are you humming about?"
-          ></textarea>
-
-          <div id="under-new-tweet">
-            <input type="submit" value="Tweet" />
-            <span class="display-error"></span>
-            <span class="counter">140</span>
-          </div>
-
-        </form>
-      </section>
-
-
-    <section id="tweets-container"></section>
-    </main>
-    <button id="to-top">
-      <i id="to-top-icon" class="fas fa-angle-double-up"></i>
-    </button>
-  </body>
-  <!--App JS that needs to load after body-->
-  
-  <script
-  type="text/javascript"
-  src="/scripts/composer-char-counter.js"
-   ></script>
-
-  <script type="text/javascript" src="/scripts/client.js">
-  
-  </script>
-  
-  </html>
+<!-- Back To Top Arrow -->
+<div class="to-top">
+<i class="fas fa-arrow-up"></i>
+</div>
+</body>
+</html>
