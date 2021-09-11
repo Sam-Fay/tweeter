@@ -1,39 +1,41 @@
-h2 {
-  text-align: center;
-}
-
-textarea {
-  width: 100%;
-  background-color: inherit;
-  border: none;
-  border-bottom: 4px solid #242135;
-}
-
-.counter {
-  font-family: "Bungee";
-  float: right;
-  position: relative;
-  top: 0;
-  margin-top: 0.55%;
-}
-
-input {
-  font-family: "Bungee";
-  font-size: 25px;
-  color: #fefefe;
-  background-color: #4056a1;
-  padding: 6px 6px;
-}
-
-#under-new-tweet {
+.new-tweet {
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
 }
 
-.display-error {
-  margin: 1% 0 0 2%;
-  font-family: "Bungee";
-  font-size: 19px;
-  width: 81%;
+.new-tweet form {
+  width: 100%;
+}
+
+.new-tweet .form-top {
+  border-bottom: 2px solid black;
+}
+
+#tweet-text {
+  width: 100%;
+  border: none;
+  background-color: inherit;
+  resize: none;
+}
+
+.new-tweet .form-bottom {
+  display: flex;
+  justify-content: space-between;
+  font-family:'Bungee', sans-serif;
+  margin-top: 1em;
+}
+
+.new-tweet .form-bottom button {
+  border: none;
+  background-color: #4056a1;
+  color: #ffffff;
+}
+
+.counterOverLimit {
+  color: red;
+}
+
+.counterUnderLimit {
+  color: #545149
 }

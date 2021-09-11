@@ -2,7 +2,7 @@ nav {
   top: 0;
   height: 120px;
   width: 100%;
-  background-color: #4056a1;
+  background-color: #263463;
   color: #ffffff;
   padding: 1.5em;
   position: fixed;
@@ -39,7 +39,7 @@ nav .right-nav:hover {
 }
 
 nav i {
-  color: red;
+  color: rgb(240, 231, 231);
   animation: MoveUpDown 2s linear infinite;
 }  
 
