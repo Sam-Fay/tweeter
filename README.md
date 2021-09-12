@@ -2,7 +2,7 @@
 
 ![Desktop screenshot](./doc/Desktop.View.png)
 
-![Tablet screenshot](doc/Tablet.view.png)
+![Tablet screenshot](doc/Tablet.View.png)
 
 ![Mobile screenshot2](doc/Mobile.View.png)
 
